@@ -122,6 +122,7 @@ textarea {
   height: 100%;
 }
 #main .row:after {
+  display: block;
   content: '';
   clear: both;
 }
