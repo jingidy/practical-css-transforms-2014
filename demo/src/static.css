@@ -137,14 +137,18 @@ textarea {
 }
 
 .person .photo {
-  width: 250px;
+  width: 100%;
   height: 300px;
   background-color: #ddd;
   background-size: cover;
+  border: 1px solid white;
 }
 .photo.matt {
   background-image: url('images/matt.jpg');
 }
 .photo.jing {
   background-image: url('images/jing.jpg');
+}
+.person .bio {
+  background-color: white;
 }
