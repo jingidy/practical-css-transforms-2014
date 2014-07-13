@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 body, input, textarea {
@@ -112,7 +113,34 @@ textarea {
 .section:last-child {
   margin-bottom: 2em;
 }
+.section > *:not(h1) {
+  margin-left: 1em;
+}
 
 .expandable .label {
   cursor: default;
+}
+
+.people_container {
+  display: table-row;
+  margin-left: 0;
+}
+
+.person {
+  display: table-cell;
+  width: 50%;
+  padding: 1em;  
+}
+
+.person .photo {
+  width: 250px;
+  height: 300px;
+  background-color: #ddd;
+  background-size: cover;
+}
+.photo.matt {
+  background-image: url('images/matt.jpg');
+}
+.photo.jing {
+  background-image: url('images/jing.jpg');
 }
