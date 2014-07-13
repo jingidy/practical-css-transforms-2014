@@ -3,6 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   position: relative;
+
+  color: #3F4D59;
 }
 
 body, input, textarea {
@@ -40,19 +42,21 @@ h1 + section > h2 {
 
 a, a:hover, a:active, a:visited {
   text-decoration: none;
+  color: #A4B4BE;
 }
 
+.contact form {
+  width: 100%;
+  text-align: center;
+}
 .button_container {
   display: inline-block;
-}
-.button {
-  margin: 0.5em 0;
 }
 button {
   font-size: 26px;
   padding: 0.6em 1em;
   border: none;
-  background-color: deepskyblue;
+  background-color: #A4B4BE;
   margin: 0;
   
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -66,7 +70,6 @@ input, textarea {
   display: block;
   padding: 0.5em 1em;
   width: 100%;
-  max-width: 500px;
   margin-bottom: 1em;
   border: 1px solid gainsboro;
 }
@@ -98,7 +101,7 @@ textarea {
   width: 100%;
   height: 100%;
   padding: 0 0.25em;
-  border-left: 2px solid blue;
+  border-left: 2px solid #A4B4BE;
 }
 
 #main_container {
@@ -121,8 +124,25 @@ textarea {
   margin-left: 1em;
 }
 
+.intro h1 {
+  color: #00AAB5;
+}
+.services h1 {
+  color: #F41C54;
+}
+.contact h1 {
+  color: #A8BF12;
+}
+.about h1 {
+  color: #FF9F00;
+}
+
 .expandable .label {
   cursor: default;
+}
+
+.section.contact .button_container {
+  text-align: center;
 }
 
 .people_container {

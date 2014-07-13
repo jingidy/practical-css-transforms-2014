@@ -36,30 +36,33 @@
 .button_container {
   -webkit-perspective: 800px;
 }
-.button {
+button {
+  -webkit-transform: rotateX(30deg);  
   -webkit-transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.25s;
 }
-.button_bottom {
+button:after {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
   height: 10px;
-  background-color: black;
+  content: '';
+  background-color: #3F4D59;
   -webkit-transform: rotateX(-90deg);
   -webkit-transform-origin: top;
-
-  -webkit-transition: -webkit-transform 0.25s;
 }
-
-.button_container:hover .button {
-  -webkit-transform: rotateX(30deg);  
+.button_container:hover button {
+  -webkit-transform: rotateX(30deg) translateZ(10px);
 }
-.button_container:active .button {
-  -webkit-transition-duration: 0.1s;
+.button_container:hover button:after {
+  -webkit-transform: rotateX(-90deg) scaleY(2);  
+}
+.button_container:active button {
   -webkit-transform: rotateX(30deg) translateZ(-10px);
 }
-.button_container:active .button_bottom {
-  -webkit-transition-duration: 0.1s;
-  -webkit-transform: rotateX(-90deg) scaleY(0.5);
+.button_container:active button:after {
+  -webkit-transform: rotateX(-90deg) scaleY(0);  
 }
 
 .people_container {
