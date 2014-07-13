@@ -1,6 +1,45 @@
+body #main {
+  -webkit-perspective: 800px;
+  /* Fix for chrome scrolling when there are
+     some accelerated elements and some non-accelerated */
+  -webkit-transform: translateZ(0);
+}
+
+body #main > .section {
+  opacity: 0;
+  -webkit-transition: 0.75s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+}
+body #main > .section:nth-child(odd) {
+  -webkit-transform-origin: left;
+  -webkit-transform: scale(0) translateX(-300px);
+}
+body #main > .section:nth-child(even) {
+  -webkit-transform-origin: right;
+  -webkit-transform: scale(0) translateX(300px);
+}
+body #nav {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 1.25s ease-in-out;
+}
+
+body.loaded #main > .section {
+  -webkit-transform: none;
+  opacity: 1;
+}
+body.loaded #nav {
+  opacity: 1;
+}
+
 #nav li > a {
   -webkit-transition: -webkit-transform 0.15s ease-out;
 }
 #nav li > a:hover {
   -webkit-transform: translateX(15px);
+}
+
+.contact button,
+.contact button:after {
+  -webkit-transition-property:  -webkit-transform, background-color;
+  -webkit-transition: 0.15s ease-out;
 }
