@@ -81,6 +81,8 @@ textarea {
   left: 1em;
   width: 150px;
   font-size: 30px;
+
+  z-index: 2;
 }
 #nav {
   padding: 1em 0 1em;
@@ -103,6 +105,8 @@ textarea {
   width: 100%;
   height: 100%;
   overflow: auto;
+
+  z-index: 1;
 }
 #main {
   padding: 0 1em 1em 200px;
