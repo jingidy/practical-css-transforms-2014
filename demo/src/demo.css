@@ -6,31 +6,11 @@
 }
 
 .expandable .label .disclosure {
-  display: inline-block;
-  width: 10px;
-  height: 15px;
-  margin-right: 5px;
-
-  overflow: hidden;
-}
-.expandable .label .disclosure:before {
-  content: '';
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: black;
-
-  -webkit-transform: rotate(45deg);
-  -webkit-transform-origin: top left;
-}
-.expandable .content {
-  display: none;
+  -webkit-transform-origin: left;
+  -webkit-transition: -webkit-transform 0.15s ease-out;
 }
 .expandable.expanded .label .disclosure {
   -webkit-transform: rotate(90deg);
-}
-.expandable.expanded .content {
-  display: inherit;
 }
 
 .button_container {
