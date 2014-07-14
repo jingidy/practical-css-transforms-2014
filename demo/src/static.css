@@ -164,13 +164,6 @@ textarea {
   height: 10px;
   margin-bottom: 5px;
   margin-right: 5px;
-
-  border: 5px solid transparent;
-  border-left-color: black;  
-}
-.expandable.expanded .label .disclosure {
-  border: 5px solid transparent;
-  border-top-color: black;  
 }
 
 .section.contact .button_container {
