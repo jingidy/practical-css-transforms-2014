@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+
+  color: #3F4D59;
+}
+
+body, input, textarea {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 1.5;
+}
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 700px;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  padding: 0.5em 0;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 26px;
+}
+h1 + section > h2 {
+  padding-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #A4B4BE;
+}
+a:hover {
+  color: #74AFD4;
+}
+
+
+.contact form {
+  width: 100%;
+  text-align: center;
+}
+.button_container {
+  display: inline-block;
+}
+button {
+  font-size: 26px;
+  padding: 0.6em 1em;
+  border: none;
+  background-color: #A4B4BE;
+  margin: 0;
+  
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  color: white;
+
+  cursor: pointer;
+  outline: none;
+}
+button:hover {
+  background-color: #96AFBE;
+}
+button:active {
+  background-color: #74AFD4;
+}
+
+input, textarea {
+  display: block;
+  padding: 0.5em 1em;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid gainsboro;
+}
+textarea {
+  height: 5em;
+  resize: none;
+}
+
+#nav_container {
+  position: absolute;
+  top: 80px;
+  left: 1em;
+  width: 150px;
+  font-size: 30px;
+
+  z-index: 2;
+}
+#nav {
+  padding: 1em 0 1em;
+}
+#nav li {
+  list-style: none;
+}
+#nav li + li {
+  border-top: 1px solid gainsboro;
+}
+#nav li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.25em;
+  border-left: 2px solid #A4B4BE;
+}
+
+#main_container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  z-index: 1;
+}
+#main {
+  padding: 0 1em 1em 200px;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+}
+.section:last-child {
+  margin-bottom: 2em;
+}
+.section > *:not(h1) {
+  margin-left: 1em;
+}
+
+.intro h1 {
+  color: #00AAB5;
+}
+.services h1 {
+  color: #F41C54;
+}
+.contact h1 {
+  color: #A8BF12;
+}
+.about h1 {
+  color: #FF9F00;
+}
+
+.expandable .label {
+  cursor: default;
+}
+.expandable .content {
+  display: none;
+}
+.expandable.expanded .content {
+  display: inherit;
+}
+.expandable .label .disclosure {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.section.contact .button_container {
+  text-align: center;
+}
+
+.people_container {
+  display: table-row;
+  margin-left: 0;
+}
+
+.person {
+  display: table-cell;
+  width: 50%;
+  padding: 1em;  
+}
+
+.person .photo {
+  width: 100%;
+  height: 300px;
+  background-color: #ddd;
+  background-size: cover;
+  border: 1px solid white;
+}
+.photo.matt {
+  background-image: url('images/matt.jpg');
+}
+.photo.jing {
+  background-image: url('images/jing.jpg');
+}
+.person .bio {
+  background-color: white;
+}
