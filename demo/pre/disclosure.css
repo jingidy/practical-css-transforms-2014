@@ -6,11 +6,3 @@
   border: 5px solid transparent;
   border-top-color: black;  
 }
-
-.expandable .label .disclosure {
-  -webkit-transform-origin: left;
-  -webkit-transition: -webkit-transform 0.15s ease-out;
-}
-.expandable.expanded .label .disclosure {
-  -webkit-transform: rotate(90deg);
-}
