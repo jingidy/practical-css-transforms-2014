@@ -1,0 +1,30 @@
+.people_container {
+  -webkit-perspective: 800px;
+}
+
+.person .photo,
+.person .bio {
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+
+.person .photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.person .bio {
+  -webkit-transform: rotateY(180deg);
+}
+
+.person:hover .photo {
+  -webkit-transform: rotateY(-180deg);
+}
+.person:hover .bio {
+  -webkit-transform:rotateY(0);
+}
+
