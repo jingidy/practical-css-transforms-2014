@@ -1,13 +1,34 @@
 $(function () {
-  var delay = 0;
-  var delayDelta = 0.15;
-  $('#main > .section').each(function (index) {
-    $(this).css('-webkit-transition-delay', 
-                delay + delayDelta * index + 's');
+  // Load sections as they scroll into view
+  var $window = $(window);
+  var $sections = $('.section');
+  function isElementInView($el) {
+   var docBottom = $window.scrollTop() + $window.height();
+   var elTop = $el.offset().top;
+   return elTop <= docBottom;  
+  }
+
+  function loadSectionsInView() {
+    $sections.each(function () {
+      $this = $(this);
+      if (isElementInView($this)) {
+        $this.addClass('loaded');
+      }
+    })
+  }
+
+  var lastLoadSections = null;
+  $('#main_container').on('scroll', function (e) {
+    if (lastLoadSections) return;
+    lastLoadSections = setTimeout(function () {
+      loadSectionsInView();
+      lastLoadSections = null;
+    }, 300);
   });
 
-  // Animate everything in after they've laid out on screen.
+  // Finally run load animations
   setTimeout(function () {
-  $(document.body).addClass('loaded');    
+    $(document.body).addClass('loaded');
+    loadSectionsInView();
   }, 0);
 });

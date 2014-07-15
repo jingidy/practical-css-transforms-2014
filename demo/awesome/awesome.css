@@ -4,30 +4,34 @@ body #main {
      some accelerated elements and some non-accelerated */
   -webkit-transform: translateZ(0);
 }
+#main:after {
+  content: '.';
+  color: transparent;
+}
 
-body #main > .section {
-  opacity: 0;
-  -webkit-transition: 0.75s ease-in-out;
-  -webkit-transition-property: opacity, -webkit-transform;
-}
-body #main > .section:nth-child(odd) {
-  -webkit-transform-origin: left;
-  -webkit-transform: scale(0) translateX(-300px);
-}
-body #main > .section:nth-child(even) {
-  -webkit-transform-origin: right;
-  -webkit-transform: scale(0) translateX(300px);
-}
 body #nav {
   opacity: 0;
   -webkit-transition: opacity 0.5s 1.25s ease-in-out;
 }
-
-body.loaded #main > .section {
-  -webkit-transform: none;
+body.loaded #nav {
   opacity: 1;
 }
-body.loaded #nav {
+
+.section {
+  opacity: 0;
+  -webkit-transition: 0.75s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+}
+.section:nth-child(odd) {
+  -webkit-transform-origin: left;
+  -webkit-transform: scale(0) translateX(-300px);
+}
+.section:nth-child(even) {
+  -webkit-transform-origin: right;
+  -webkit-transform: scale(0) translateX(300px);
+}
+.section.loaded {
+  -webkit-transform: none;
   opacity: 1;
 }
 
