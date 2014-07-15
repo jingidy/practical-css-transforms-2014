@@ -1,4 +1,4 @@
-practical-css-transforms-2014
+Practical CSS Transforms
 =============================
 
 Slides and demo for the Practical CSS Transforms talk at CSSSummit 2014
